@@ -176,16 +176,54 @@ a {
 /* Hero */
 
 .hero {
+  position: relative;
   background: var(--bg-dark);
   color: var(--ink-on-dark);
+  overflow: hidden;
+  padding-bottom: 5.5rem;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  padding-bottom: 4rem;
+.hero-photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 44%;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: saturate(0.55) hue-rotate(-95deg);
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(79, 174, 118, 0.08);
+  mix-blend-mode: color;
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(11, 20, 15, 0.6) 0%, transparent 22%),
+    linear-gradient(90deg, var(--bg-dark) 0%, transparent 20%);
+}
+
+.hero .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy {
+  max-width: 620px;
+  padding-top: 2rem;
 }
 
 .hero h1 {
@@ -218,28 +256,11 @@ a {
   letter-spacing: 0.01em;
 }
 
-.hero-visual {
-  position: relative;
-}
-
-.hero-photo {
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-}
-
-.hero-photo svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
 .leaf-card {
-  position: absolute;
-  left: -1.25rem;
-  bottom: -1.5rem;
-  right: 1.5rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 3rem;
+  max-width: 420px;
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
@@ -323,6 +344,14 @@ section {
   height: 32px;
   margin: 0 auto 1.1rem;
   color: var(--accent);
+}
+
+.how-col svg.icon-eye {
+  transform: translateY(-4px);
+}
+
+.how-col svg.icon-trend {
+  transform: translateY(-6px);
 }
 
 .how-col h3 {
@@ -577,12 +606,12 @@ footer p {
   to { opacity: 1; transform: none; }
 }
 
-.hero-grid > div > * {
+.hero-copy > * {
   animation: fadeUp 0.6s ease both;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-grid > div > * {
+  .hero-copy > * {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -592,12 +621,32 @@ footer p {
 /* Responsive */
 
 @media (max-width: 960px) {
-  .hero-grid, .approach-grid, .contact-grid {
+  .approach-grid, .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-visual {
+  .hero {
+    padding-bottom: 2rem;
+  }
+
+  .hero-photo {
+    position: static;
+    width: 100%;
+    height: 260px;
     margin-top: 2rem;
+  }
+
+  .hero-photo::after {
+    background: linear-gradient(180deg, rgba(11, 20, 15, 0.35) 0%, transparent 30%);
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .leaf-card {
+    max-width: none;
+    margin-top: 1.5rem;
   }
 
   .how-grid {
