@@ -1,15 +1,16 @@
 <!doctype html>
+<!-- Variant: Dynamic (DRAFT) — Klaus's proposed teal + orange accent on the official v1.0 brand neutrals (see Coreon Brand Guidelines.pdf), plus the "less square" shape direction. Not confirmed — see the design document on the Desktop before promoting. -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Coreon Energy</title>
-  <meta name="description" content="Coreon optimizes the energy cost of your existing operations by using power when it's cheapest — no new machinery, measurable savings." />
+  <meta name="description" content="Coreon optimizes the energy cost of your existing operations by using power when it's cheapest — one smart device, measurable savings." />
   <meta name="theme-color" content="#0B140F" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Coreon" />
   <meta property="og:title" content="Coreon — energy into a strategic resource" />
-  <meta property="og:description" content="Coreon optimizes the energy cost of your existing operations by using power when it's cheapest — no new machinery, measurable savings." />
+  <meta property="og:description" content="Coreon optimizes the energy cost of your existing operations by using power when it's cheapest — one smart device, measurable savings." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,28 +19,48 @@
 </head>
 <body>
 
-  <section class="hero">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollProgress"></div></div>
+
+  <header class="site-header">
+    <div class="wrap nav-inner">
+      <div class="brand-block">
+        <a class="brand" href="#hero">c<span class="o">o</span>reon</a>
+        <svg class="brand-mark" viewBox="0 0 100 75" preserveAspectRatio="none" aria-label="Positive growth">
+          <polygon points="0,75 100,0 100,75" />
+        </svg>
+      </div>
+      <div class="nav-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="dk">DK</button>
+        </div>
+        <a class="btn btn-ghost" href="#contact" data-i18n="nav.contact">Start with 15 minutes</a>
+      </div>
+    </div>
+    <nav class="step-rail" aria-label="Page sections">
+      <div class="wrap step-rail-inner">
+        <a href="#hero" class="step-link" data-step="hero"><span class="step-num">01</span><span class="step-label" data-i18n="nav.step1">Overview</span></a>
+        <a href="#how" class="step-link" data-step="how"><span class="step-num">02</span><span class="step-label" data-i18n="nav.step2">How it works</span></a>
+        <a href="#journey" class="step-link" data-step="journey"><span class="step-num">03</span><span class="step-label" data-i18n="nav.step3">Our process</span></a>
+        <a href="#stats" class="step-link" data-step="stats"><span class="step-num">04</span><span class="step-label" data-i18n="nav.step4">Results</span></a>
+        <a href="#contact" class="step-link" data-step="contact"><span class="step-num">05</span><span class="step-label" data-i18n="nav.step5">Contact</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
     <div class="hero-photo">
-      <img src="images/hero.jpg" alt="Industrial processing plant lit up at night" />
+      <img src="../images/hero-bright.jpg" alt="Industrial plant at dusk with a clear sky and a reflecting pond" width="1600" height="1068" />
     </div>
 
     <div class="wrap">
-      <header class="nav-inner">
-        <span class="brand">c<span class="o">o</span>reon</span>
-        <div class="nav-right">
-          <div class="lang-switch" role="group" aria-label="Language">
-            <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
-            <button type="button" class="lang-btn" data-lang="dk">DK</button>
-          </div>
-          <a class="btn btn-ghost" href="#contact" data-i18n="nav.contact">Contact us</a>
-        </div>
-      </header>
-
-      <div class="hero-copy">
+      <div class="hero-copy" id="main" tabindex="-1">
         <h1 data-i18n="hero.h1">We turn energy into a <span class="hl">strategic resource.</span></h1>
         <div class="divider"></div>
-        <p data-i18n="hero.p1">Coreon optimizes the energy cost of your existing operations – not by using less energy, but by using it <span class="hl">when it costs less.</span></p>
-        <p data-i18n="hero.p2">We connect to your existing equipment and energy setup, optimize in the background and deliver measurable savings – without investing in new machinery.</p>
+        <p data-i18n="hero.p1">You won't use less energy — just <span class="hl">smarter timing.</span> Coreon shifts your existing consumption to the hours it costs less, automatically.</p>
+        <p data-i18n="hero.p2">You keep your existing equipment and energy setup — we just add one smart optimization device, optimize in the background, and deliver measurable savings. No new machinery, no major investment.</p>
         <p class="hero-cta">
           <span data-i18n="hero.cta1">You won't see Coreon.</span><br />
           <span data-i18n="hero.cta2">You'll see the results.</span>
@@ -57,12 +78,17 @@
         </p>
       </div>
     </div>
+
+    <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,32 C240,80 480,0 720,24 C960,48 1200,88 1440,40 L1440,80 L0,80 Z" fill="var(--paper)" />
+    </svg>
   </section>
 
-  <section class="how">
+  <section class="how" id="how">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow" data-i18n="how.head">How Coreon works</p>
+        <p class="eyebrow" data-i18n="how.head">How you benefit with Coreon</p>
+        <h2 data-i18n="how.h2">Does your equipment run when it suits operations <span class="hl">— not when power is cheapest?</span></h2>
         <div class="divider"></div>
       </div>
       <div class="how-grid">
@@ -84,7 +110,7 @@
             <path d="M21.21 15.89A10 10 0 1 1 8 2.83" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
           </svg>
           <h3 data-i18n="how.c2h">Lower cost through smart timing</h3>
-          <p data-i18n="how.c2p">We identify the best times to use energy – and shift consumption to when it is cheapest.</p>
+          <p data-i18n="how.c2p">You keep running as usual — we shift the timing behind the scenes, to when it's cheapest.</p>
           <span class="check">
             <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor" /><path d="M4.5 8.2l2.2 2.2 4.8-5" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" /></svg>
             <span data-i18n="how.c2c">Use the same – or more – energy and still pay less.</span>
@@ -96,7 +122,7 @@
             <path d="m22 17-8.5-8.5-5 5L2 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
           <h3 data-i18n="how.c3h">Optimize what you already have</h3>
-          <p data-i18n="how.c3p">We optimize your existing equipment and setup. No new machines. No major investments.</p>
+          <p data-i18n="how.c3p">We optimize your existing equipment and setup with a single smart device. No fleet of new machines. No major investments.</p>
           <span class="check">
             <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor" /><path d="M4.5 8.2l2.2 2.2 4.8-5" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" /></svg>
             <span data-i18n="how.c3c">Just a smart setup. We handle the rest.</span>
@@ -115,10 +141,105 @@
           </span>
         </div>
       </div>
+
+      <div class="chart-card">
+        <div class="chart-card-head">
+          <div>
+            <h3 data-i18n="chart.h3">What smart timing looks like</h3>
+            <p data-i18n="chart.p">Total cost, added up hour by hour across the day — this is where the savings actually show up. It cycles through a few different scenarios automatically. Illustrative example, not live data.</p>
+          </div>
+          <div class="chart-savings-badge">
+            <span class="chart-savings-value" id="chartSavingsValue">+7%</span>
+            <span data-i18n="chart.accBadge">total cost, same day</span>
+          </div>
+        </div>
+        <svg class="chart-svg chart-svg-acc" viewBox="0 0 800 118" role="img" aria-labelledby="chartAccTitle chartAccDesc">
+          <title id="chartAccTitle" data-i18n="chart.accTitle">Accumulated cost through the day, with and without Coreon</title>
+          <desc id="chartAccDesc" data-i18n="chart.accDesc">A running total of cost across the day. Both lines start at zero; the Coreon line ends visibly lower, showing the total saved by the end of the day.</desc>
+
+          <line x1="40" y1="92" x2="760" y2="92" class="chart-axis" />
+
+          <polyline id="chartAccBefore" class="chart-line chart-line-before" points="40.0,92.0 55.0,91.2 70.0,90.4 85.0,89.8 100.0,89.1 115.0,88.5 130.0,88.0 145.0,87.4 160.0,86.9 175.0,86.4 190.0,85.7 205.0,85.0 220.0,83.9 235.0,82.4 250.0,80.2 265.0,77.6 280.0,74.5 295.0,71.4 310.0,68.7 325.0,66.3 340.0,64.2 355.0,62.2 370.0,60.4 385.0,58.7 400.0,57.0 415.0,55.4 430.0,53.8 445.0,52.3 460.0,50.7 475.0,49.1 490.0,47.3 505.0,45.3 520.0,43.0 535.0,40.4 550.0,37.2 565.0,33.9 580.0,30.5 595.0,27.4 610.0,24.7 625.0,22.5 640.0,20.8 655.0,19.2 670.0,17.9 685.0,16.8 700.0,15.7 715.0,14.7 730.0,13.7 745.0,12.9 760.0,12.0" />
+          <polyline id="chartAccAfter" class="chart-line chart-line-after chart-line-after-acc" points="40.0,92.0 55.0,91.2 70.0,90.4 85.0,89.7 100.0,88.7 115.0,87.8 130.0,86.9 145.0,86.0 160.0,85.1 175.0,84.3 190.0,83.4 205.0,82.3 220.0,81.1 235.0,79.6 250.0,77.5 265.0,75.1 280.0,72.9 295.0,70.6 310.0,68.1 325.0,65.7 340.0,63.6 355.0,61.6 370.0,59.8 385.0,58.1 400.0,56.4 415.0,54.8 430.0,53.3 445.0,51.7 460.0,50.2 475.0,48.5 490.0,46.7 505.0,44.7 520.0,42.4 535.0,40.0 550.0,37.8 565.0,35.6 580.0,33.4 595.0,31.3 610.0,29.6 625.0,28.0 640.0,26.4 655.0,24.9 670.0,23.6 685.0,22.4 700.0,21.3 715.0,20.3 730.0,19.4 745.0,18.5 760.0,17.7" />
+
+          <text x="40" y="112" class="chart-axis-label">00</text>
+          <text x="220" y="112" class="chart-axis-label">06</text>
+          <text x="392" y="112" class="chart-axis-label" text-anchor="middle">12</text>
+          <text x="580" y="112" class="chart-axis-label" text-anchor="end">18</text>
+          <text x="760" y="112" class="chart-axis-label" text-anchor="end">24</text>
+        </svg>
+        <div class="chart-legend">
+          <span class="chart-legend-item"><span class="chart-swatch chart-swatch-before"></span><span data-i18n="chart.legendBefore">Without optimization</span></span>
+          <span class="chart-legend-item"><span class="chart-swatch chart-swatch-after"></span><span data-i18n="chart.legendAfter">With Coreon</span></span>
+        </div>
+        <div class="chart-brand-mark" aria-hidden="true">
+          <span class="chart-brand-mark-o">O</span>
+          <svg class="chart-brand-mark-triangle" viewBox="0 0 100 75" preserveAspectRatio="none">
+            <polygon points="0,75 100,0 100,75" />
+          </svg>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="stats">
+  <section class="journey" id="journey">
+    <svg class="journey-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,48 C240,0 480,80 720,56 C960,32 1200,-8 1440,40 L1440,0 L0,0 Z" fill="var(--paper)" />
+    </svg>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="journey.head">Our process</p>
+        <h2 data-i18n="journey.h2">A straightforward path – <span class="hl">from first chat to first savings.</span></h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="journey-steps">
+        <div class="journey-step">
+          <div class="journey-media">
+            <img src="../images/journey/step1-dialogue.jpg" alt="Coreon and customer team talking through the setup, smiling" loading="lazy" width="1100" height="734" />
+          </div>
+          <div class="journey-copy">
+            <span class="journey-num">01</span>
+            <h3 data-i18n="journey.s1h">We start with a conversation</h3>
+            <p data-i18n="journey.s1p">No forms, no long onboarding. A short, honest conversation about how your operations run today – so we understand what matters to you, not just your meter data.</p>
+            <span class="journey-tag" data-i18n="journey.s1t">15 minutes of your time. That's the ask.</span>
+          </div>
+        </div>
+
+        <div class="journey-step is-reverse">
+          <div class="journey-media">
+            <img src="../images/journey/step2-solution.jpg" alt="Team reviewing the documented savings plan together" loading="lazy" width="760" height="1140" />
+          </div>
+          <div class="journey-copy">
+            <span class="journey-num">02</span>
+            <h3 data-i18n="journey.s2h">We show you exactly where the savings are</h3>
+            <p data-i18n="journey.s2p">We map your setup and hand you a clear, documented plan – the sites, the hours, the numbers. No black box, no guesswork you have to take on trust.</p>
+            <span class="journey-tag" data-i18n="journey.s2t">You see the plan before you say yes.</span>
+          </div>
+        </div>
+
+        <div class="journey-step">
+          <div class="journey-media">
+            <img src="../images/journey/step3-handshake.jpg" alt="Handshake confirming the partnership" loading="lazy" width="1100" height="734" />
+          </div>
+          <div class="journey-copy">
+            <span class="journey-num">03</span>
+            <h3 data-i18n="journey.s3h">We shake on it – and get to work</h3>
+            <p data-i18n="journey.s3p">Once you're on board, we handle the setup in the background. You keep running your business exactly as before – just with lower energy costs from day one.</p>
+            <span class="journey-tag" data-i18n="journey.s3t">Your time stays yours. We take it from here.</span>
+          </div>
+        </div>
+      </div>
+      <div class="journey-brand-mark" aria-hidden="true">
+        <span class="chart-brand-mark-o">O</span>
+        <svg class="chart-brand-mark-triangle" viewBox="0 0 100 75" preserveAspectRatio="none">
+          <polygon points="0,75 100,0 100,75" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" id="stats">
     <div class="wrap">
       <div class="stats-grid">
         <div class="stat">
@@ -171,17 +292,20 @@
   </section>
 
   <section class="approach">
+    <svg class="approach-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,48 C240,0 480,80 720,56 C960,32 1200,-8 1440,40 L1440,0 L0,0 Z" fill="var(--bg-dark)" />
+    </svg>
     <div class="wrap approach-grid">
       <div>
-        <h2 data-i18n="approach.h2">No new investments. No disruption. <span class="hl">Just lower energy costs.</span></h2>
-        <p class="lead" data-i18n="approach.p">We work with what you have. We connect to your existing systems and equipment, optimize timing, load and flexibility – and turn energy into a competitive advantage.</p>
+        <h2 data-i18n="approach.h2">One smart device. No disruption. <span class="hl">Just lower energy costs.</span></h2>
+        <p class="lead" data-i18n="approach.p">You keep what you have. We connect to your existing systems and equipment, optimize timing, load and flexibility – and turn energy into a competitive advantage.</p>
       </div>
       <div class="approach-list">
         <div class="approach-row">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
           <div>
-            <h3 data-i18n="approach.r1h">We work with what you have</h3>
-            <p data-i18n="approach.r1p">We connect to your existing systems and equipment. No new hardware needed.</p>
+            <h3 data-i18n="approach.r1h">You keep what you have</h3>
+            <p data-i18n="approach.r1p">We connect to your existing systems and equipment through one smart device. No new hardware fleet, no big installation project.</p>
           </div>
         </div>
         <div class="approach-row">
@@ -206,22 +330,87 @@
           </div>
         </div>
       </div>
+      <div class="approach-brand-mark" aria-hidden="true">
+        <span class="chart-brand-mark-o">O</span>
+        <svg class="chart-brand-mark-triangle" viewBox="0 0 100 75" preserveAspectRatio="none">
+          <polygon points="0,75 100,0 100,75" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-cta">
+    <div class="wrap">
+      <p data-i18n="faqCta.text">Still have questions? We're happy to talk it through.</p>
+      <a class="btn btn-primary" href="#contact" data-i18n="faqCta.button">Get in touch</a>
+    </div>
+    <svg class="faq-cta-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,32 C240,80 480,0 720,24 C960,48 1200,88 1440,40 L1440,80 L0,80 Z" fill="var(--paper)" />
+    </svg>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="faq.head">FAQ</p>
+        <h2 data-i18n="faq.h2">Questions worth asking <span class="hl">before you say yes.</span></h2>
+        <div class="divider"></div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary data-i18n="faq.q1">Do we need to install new equipment?</summary>
+          <p data-i18n="faq.a1">Just one smart optimization device — no fleet of new machinery, no major installation project. It connects to what you already have and does the work in the background.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q2">Will this disrupt how we operate today?</summary>
+          <p data-i18n="faq.a2">No. You keep running your business exactly as before — we optimize in the background once you've approved the plan.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q3">How much could we realistically save?</summary>
+          <p data-i18n="faq.a3">Typical savings are 10–30% on energy costs, with most customers seeing a return in under 6 months. Actual savings depend on your setup — the first conversation is where we map what's realistic for you.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q4">What does the first step actually involve?</summary>
+          <p data-i18n="faq.a4">A short, honest conversation about how your operations run today — about 15 minutes. No forms, no long onboarding.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q5">What happens to our data?</summary>
+          <p data-i18n="faq.a5">It's used only to power your optimization — never sold or shared with third parties. If you have specific data-handling or security requirements, we'll go through them before you commit to anything.</p>
+        </details>
+      </div>
+      <div class="faq-brand-mark" aria-hidden="true">
+        <span class="chart-brand-mark-o">O</span>
+        <svg class="chart-brand-mark-triangle" viewBox="0 0 100 75" preserveAspectRatio="none">
+          <polygon points="0,75 100,0 100,75" />
+        </svg>
+      </div>
     </div>
   </section>
 
   <section class="contact" id="contact">
+    <svg class="contact-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,48 C240,0 480,80 720,56 C960,32 1200,-8 1440,40 L1440,0 L0,0 Z" fill="var(--paper)" />
+    </svg>
     <div class="wrap contact-grid">
       <div class="contact-intro">
         <h2 data-i18n="contact.h2">Ready to turn energy into <span class="hl">advantage?</span></h2>
-        <p data-i18n="contact.p">Let's talk about how Coreon can lower your energy costs – without new investments.</p>
+        <p data-i18n="contact.p">Curious what this looks like for your sites? One 15-minute call will tell you.</p>
         <ul class="contact-list">
           <li>
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.6" /></svg>
             <a href="mailto:hello@coreon.dk">hello@coreon.dk</a>
+            <button type="button" class="copy-btn" data-copy="hello@coreon.dk" aria-label="Copy email address" data-i18n-aria="a11y.copyEmail">
+              <svg class="icon-copy" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6" /><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.6" /></svg>
+              <svg class="icon-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.2l4.4 4.4L19.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
             <a href="tel:+4530742523">+45 30 74 25 23</a>
+            <button type="button" class="copy-btn" data-copy="+45 30 74 25 23" aria-label="Copy phone number" data-i18n-aria="a11y.copyPhone">
+              <svg class="icon-copy" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6" /><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.6" /></svg>
+              <svg class="icon-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 12.2l4.4 4.4L19.5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" stroke="currentColor" stroke-width="1.6" /><path d="M2 12h20" stroke="currentColor" stroke-width="1.6" /></svg>
@@ -244,40 +433,99 @@
           <p class="form-note" data-i18n="contact.formNote">Opens your email client with the message filled in.</p>
         </form>
       </div>
+      <div class="contact-brand-mark" aria-hidden="true">
+        <span class="contact-brand-mark-o">O</span>
+        <svg class="chart-brand-mark-triangle" viewBox="0 0 100 75" preserveAspectRatio="none">
+          <polygon points="0,75 100,0 100,75" />
+        </svg>
+      </div>
     </div>
   </section>
 
   <footer>
-    <div class="wrap">
+    <div class="wrap footer-inner">
       <p class="mono" data-i18n="footer.line">&copy; 2026 Coreon ApS. All rights reserved.</p>
+      <a class="footer-link mono" href="../cookie-policy.html" data-i18n="footer.cookies">Cookie &amp; privacy policy</a>
     </div>
   </footer>
+
+  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top" data-i18n-aria="a11y.backToTop">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+  </a>
+
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie notice" hidden>
+    <div class="wrap cookie-banner-inner">
+      <p data-i18n="cookie.text">We use only essential local storage – to remember your language choice and this preference. No tracking or analytics cookies are set. <a href="../cookie-policy.html">Read the cookie policy</a>.</p>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-ghost" id="cookieDecline" data-i18n="cookie.decline">Decline</button>
+        <button type="button" class="btn btn-primary" id="cookieAccept" data-i18n="cookie.accept">Accept</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     (function () {
       var dict = {
         en: {
-          "nav.contact": "Contact us",
+          "nav.contact": "Start with 15 minutes",
+          "nav.step1": "Overview",
+          "nav.step2": "How it works",
+          "nav.step3": "Our process",
+          "nav.step4": "Results",
+          "nav.step5": "Contact",
           "hero.h1": "We turn energy into a <span class=\"hl\">strategic resource.</span>",
-          "hero.p1": "Coreon optimizes the energy cost of your existing operations – not by using less energy, but by using it <span class=\"hl\">when it costs less.</span>",
-          "hero.p2": "We connect to your existing equipment and energy setup, optimize in the background and deliver measurable savings – without investing in new machinery.",
+          "hero.p1": "You won't use less energy — just <span class=\"hl\">smarter timing.</span> Coreon shifts your existing consumption to the hours it costs less, automatically.",
+          "hero.p2": "You keep your existing equipment and energy setup — we just add one smart optimization device, optimize in the background, and deliver measurable savings. No new machinery, no major investment.",
           "hero.cta1": "You won't see Coreon.",
           "hero.cta2": "You'll see the results.",
           "hero.leaf1": "Energy isn't just a cost.",
           "hero.leaf2": "It's a strategic resource.",
-          "how.head": "How Coreon works",
+          "how.head": "How you benefit with Coreon",
+          "how.h2": "Does your equipment run when it suits operations <span class=\"hl\">— not when power is cheapest?</span>",
           "how.c1h": "Full visibility in real time",
           "how.c1p": "See your energy use across all sites – clearly, precisely and in real time.",
           "how.c1c": "More insight. Better decisions.",
           "how.c2h": "Lower cost through smart timing",
-          "how.c2p": "We identify the best times to use energy – and shift consumption to when it is cheapest.",
+          "how.c2p": "You keep running as usual — we shift the timing behind the scenes, to when it's cheapest.",
           "how.c2c": "Use the same – or more – energy and still pay less.",
           "how.c3h": "Optimize what you already have",
-          "how.c3p": "We optimize your existing equipment and setup. No new machines. No major investments.",
+          "how.c3p": "We optimize your existing equipment and setup with a single smart device. No fleet of new machines. No major investments.",
           "how.c3c": "Just a smart setup. We handle the rest.",
           "how.c4h": "Stronger business. Lower energy cost.",
           "how.c4p": "Lower energy cost strengthens your bottom line and your sustainability profile.",
           "how.c4c": "Better results. Without compromise.",
+          "chart.h3": "What smart timing looks like",
+          "chart.p": "Total cost, added up hour by hour across the day — this is where the savings actually show up. It cycles through a few different scenarios automatically. Illustrative example, not live data.",
+          "chart.legendBefore": "Without optimization",
+          "chart.legendAfter": "With Coreon",
+          "chart.accBadge": "total cost, same day",
+          "chart.accTitle": "Accumulated cost through the day, with and without Coreon",
+          "chart.accDesc": "A running total of cost across the day. Both lines start at zero; the Coreon line ends visibly lower, showing the total saved by the end of the day.",
+          "faqCta.text": "Still have questions? We're happy to talk it through.",
+          "faqCta.button": "Get in touch",
+          "faq.head": "FAQ",
+          "faq.h2": "Questions worth asking <span class=\"hl\">before you say yes.</span>",
+          "faq.q1": "Do we need to install new equipment?",
+          "faq.a1": "Just one smart optimization device — no fleet of new machinery, no major installation project. It connects to what you already have and does the work in the background.",
+          "faq.q2": "Will this disrupt how we operate today?",
+          "faq.a2": "No. You keep running your business exactly as before — we optimize in the background once you've approved the plan.",
+          "faq.q3": "How much could we realistically save?",
+          "faq.a3": "Typical savings are 10–30% on energy costs, with most customers seeing a return in under 6 months. Actual savings depend on your setup — the first conversation is where we map what's realistic for you.",
+          "faq.q4": "What does the first step actually involve?",
+          "faq.a4": "A short, honest conversation about how your operations run today — about 15 minutes. No forms, no long onboarding.",
+          "faq.q5": "What happens to our data?",
+          "faq.a5": "It's used only to power your optimization — never sold or shared with third parties. If you have specific data-handling or security requirements, we'll go through them before you commit to anything.",
+          "journey.head": "Our process",
+          "journey.h2": "A straightforward path – <span class=\"hl\">from first chat to first savings.</span>",
+          "journey.s1h": "We start with a conversation",
+          "journey.s1p": "No forms, no long onboarding. A short, honest conversation about how your operations run today – so we understand what matters to you, not just your meter data.",
+          "journey.s1t": "15 minutes of your time. That's the ask.",
+          "journey.s2h": "We show you exactly where the savings are",
+          "journey.s2p": "We map your setup and hand you a clear, documented plan – the sites, the hours, the numbers. No black box, no guesswork you have to take on trust.",
+          "journey.s2t": "You see the plan before you say yes.",
+          "journey.s3h": "We shake on it – and get to work",
+          "journey.s3p": "Once you're on board, we handle the setup in the background. You keep running your business exactly as before – just with lower energy costs from day one.",
+          "journey.s3t": "Your time stays yours. We take it from here.",
           "stats.l1": "Typical savings",
           "stats.s1": "lower energy costs",
           "stats.l2": "Fast return",
@@ -285,10 +533,10 @@
           "stats.s2": "typical ROI",
           "stats.l3": "Measurable results",
           "stats.s3": "transparent &amp; documented",
-          "approach.h2": "No new investments. No disruption. <span class=\"hl\">Just lower energy costs.</span>",
-          "approach.p": "We work with what you have. We connect to your existing systems and equipment, optimize timing, load and flexibility – and turn energy into a competitive advantage.",
-          "approach.r1h": "We work with what you have",
-          "approach.r1p": "We connect to your existing systems and equipment. No new hardware needed.",
+          "approach.h2": "One smart device. No disruption. <span class=\"hl\">Just lower energy costs.</span>",
+          "approach.p": "You keep what you have. We connect to your existing systems and equipment, optimize timing, load and flexibility – and turn energy into a competitive advantage.",
+          "approach.r1h": "You keep what you have",
+          "approach.r1p": "We connect to your existing systems and equipment through one smart device. No new hardware fleet, no big installation project.",
           "approach.r2h": "More efficient use of your operations",
           "approach.r2p": "We optimize timing, load and flexibility so your systems run smarter – not harder.",
           "approach.r3h": "Lower energy cost strengthens your business",
@@ -296,7 +544,7 @@
           "approach.r4h": "Better for your business. Better for the planet.",
           "approach.r4p": "Lower energy cost reduces CO₂ emissions and strengthens your sustainability profile.",
           "contact.h2": "Ready to turn energy into <span class=\"hl\">advantage?</span>",
-          "contact.p": "Let's talk about how Coreon can lower your energy costs – without new investments.",
+          "contact.p": "Curious what this looks like for your sites? One 15-minute call will tell you.",
           "contact.address": "Coreon ApS, Nørrebrogade 47, 2, 2200 Copenhagen, Denmark",
           "contact.formHead": "Get in touch",
           "contact.name": "Your name",
@@ -304,30 +552,77 @@
           "contact.message": "Your message",
           "contact.send": "Send message",
           "contact.formNote": "Opens your email client with the message filled in.",
-          "footer.line": "© 2026 Coreon ApS. All rights reserved."
+          "footer.line": "© 2026 Coreon ApS. All rights reserved.",
+          "footer.cookies": "Cookie & privacy policy",
+          "cookie.text": "We use only essential local storage – to remember your language choice and this preference. No tracking or analytics cookies are set. <a href=\"../cookie-policy.html\">Read the cookie policy</a>.",
+          "cookie.decline": "Decline",
+          "cookie.accept": "Accept",
+          "a11y.skip": "Skip to content",
+          "a11y.backToTop": "Back to top",
+          "a11y.copyEmail": "Copy email address",
+          "a11y.copyPhone": "Copy phone number",
+          "a11y.copied": "Copied!"
         },
         dk: {
-          "nav.contact": "Kontakt os",
+          "nav.contact": "Start med 15 minutter",
+          "nav.step1": "Overblik",
+          "nav.step2": "Sådan virker det",
+          "nav.step3": "Vores proces",
+          "nav.step4": "Resultater",
+          "nav.step5": "Kontakt",
           "hero.h1": "Vi gør energi til en <span class=\"hl\">strategisk ressource.</span>",
-          "hero.p1": "Coreon optimerer energiomkostningen på jeres eksisterende drift – ikke ved at bruge mindre energi, men ved at bruge den, <span class=\"hl\">når den koster mindre.</span>",
-          "hero.p2": "Vi kobler os på jeres eksisterende udstyr og energisetup, optimerer i baggrunden og leverer målbare besparelser – uden investering i nyt udstyr.",
+          "hero.p1": "I skal ikke nødvendigvis bruge mindre energi — bare <span class=\"hl\">smartere timing.</span> Coreon flytter jeres eksisterende forbrug til de billigste timer, automatisk.",
+          "hero.p2": "I beholder jeres eksisterende udstyr og energisetup — vi tilføjer blot én smart optimeringsenhed, optimerer i baggrunden og leverer målbare besparelser. Ingen ny maskinpark, ingen stor investering.",
           "hero.cta1": "I vil ikke se Coreon.",
           "hero.cta2": "I vil se resultaterne.",
           "hero.leaf1": "Energi er ikke bare en omkostning.",
           "hero.leaf2": "Det er en strategisk ressource.",
-          "how.head": "Sådan virker Coreon",
+          "how.head": "Sådan får I udbytte med Coreon",
+          "how.h2": "Kører jeres udstyr, når det passer driften <span class=\"hl\">— ikke når strømmen er billigst?</span>",
           "how.c1h": "Fuldt overblik i realtid",
           "how.c1p": "Se jeres energiforbrug på tværs af alle lokationer – klart, præcist og i realtid.",
           "how.c1c": "Mere indsigt. Bedre beslutninger.",
           "how.c2h": "Lavere omkostning gennem smart timing",
-          "how.c2p": "Vi identificerer de bedste tidspunkter at bruge energi på – og flytter forbrug til, når det er billigst.",
+          "how.c2p": "I kører videre som altid — vi flytter bare timingen bag kulissen, til når det er billigst.",
           "how.c2c": "Brug samme – eller mere – energi og betal stadig mindre.",
-          "how.c3h": "Optimér det, I allerede har",
-          "how.c3p": "Vi optimerer jeres eksisterende udstyr og setup. Ingen nye maskiner. Ingen store investeringer.",
+          "how.c3h": "Optimér det, I allerede har – og dokumentér det.",
+          "how.c3p": "Vi optimerer jeres eksisterende udstyr og setup med én smart enhed. Ingen ny maskinpark. Ingen store investeringer.",
           "how.c3c": "Bare et smart setup. Vi klarer resten.",
           "how.c4h": "Stærkere forretning. Lavere energiomkostning.",
           "how.c4p": "Lavere energiomkostning styrker jeres bundlinje og jeres bæredygtighedsprofil.",
           "how.c4c": "Bedre resultater. Uden kompromis.",
+          "chart.h3": "Sådan ser smart timing ud",
+          "chart.p": "Samlet omkostning, lagt sammen time for time hen over døgnet — her kan I se, hvor besparelsen faktisk kommer fra. Den skifter automatisk mellem forskellige scenarier. Illustrativt eksempel, ikke live data.",
+          "chart.legendBefore": "Uden optimering",
+          "chart.legendAfter": "Med Coreon",
+          "chart.accBadge": "samlet omkostning, samme dag",
+          "chart.accTitle": "Akkumuleret omkostning gennem døgnet, med og uden Coreon",
+          "chart.accDesc": "En løbende sum af omkostningen gennem døgnet. Begge linjer starter ved nul; Coreon-linjen ender tydeligt lavere og viser den samlede besparelse ved dagens slutning.",
+          "faqCta.text": "Stadig spørgsmål? Vi hjælper gerne med at gennemgå det.",
+          "faqCta.button": "Skriv til os",
+          "faq.head": "FAQ",
+          "faq.h2": "Spørgsmål værd at stille <span class=\"hl\">før I siger ja.</span>",
+          "faq.q1": "Skal vi installere nyt udstyr?",
+          "faq.a1": "Kun én smart optimeringsenhed — ingen ny maskinpark, intet stort installationsprojekt. Den kobler sig på det, I allerede har, og klarer arbejdet i baggrunden.",
+          "faq.q2": "Forstyrrer det vores daglige drift?",
+          "faq.a2": "Nej. I fortsætter jeres drift præcis som hidtil — vi optimerer i baggrunden, når I har godkendt planen.",
+          "faq.q3": "Hvor meget kan vi realistisk spare?",
+          "faq.a3": "Typisk besparelse er 10–30% på energiomkostninger, og de fleste kunder ser en tilbagebetalingstid på under 6 måneder. Den faktiske besparelse afhænger af jeres setup — den første samtale er, hvor vi kortlægger, hvad der er realistisk for jer.",
+          "faq.q4": "Hvad indebærer det første skridt egentlig?",
+          "faq.a4": "En kort, ærlig samtale om, hvordan jeres drift fungerer i dag — cirka en halv til en time. Ingen formularer, ingen lang onboarding.",
+          "faq.q5": "Hvad sker der med vores data?",
+          "faq.a5": "Det bruges kun til at drive jeres optimering — sælges eller deles aldrig med tredjeparter. Har I specifikke krav til datahåndtering eller sikkerhed, gennemgår vi dem, før I forpligter jer til noget.",
+          "journey.head": "Vores proces",
+          "journey.h2": "Helt ligetil – <span class=\"hl\">fra første snak til første besparelse.</span>",
+          "journey.s1h": "Vi starter med en samtale, så vi kan forstå jeres proces",
+          "journey.s1p": "Ingen formularer, ingen lang onboarding. En kort, ærlig samtale om, hvordan jeres drift fungerer i dag – så vi forstår, hvad der betyder noget for jer, ikke kun jeres måledata.",
+          "journey.s1t": "En halv til en time af jeres tid. Det er hele opgaven.",
+          "journey.s2h": "Vi viser jer præcis, hvor besparelsen er",
+          "journey.s2p": "Vi kortlægger jeres setup og giver jer en klar, dokumenteret plan – lokationerne, timerne, tallene. Ingen sort boks, ingen gætværk.",
+          "journey.s2t": "I ser planen, før I siger ja.",
+          "journey.s3h": "Vi giver hånd på det, laver en aftale – og går i gang med det aftalte",
+          "journey.s3p": "Når I er med, klarer vi opsætningen i baggrunden. I fortsætter jeres drift præcis som hidtil – bare med lavere energiomkostninger fra dag ét.",
+          "journey.s3t": "Jeres tid forbliver jeres. Vi tager os af resten.",
           "stats.l1": "Typisk besparelse",
           "stats.s1": "lavere energiomkostninger",
           "stats.l2": "Hurtig tilbagebetaling",
@@ -335,18 +630,18 @@
           "stats.s2": "typisk ROI",
           "stats.l3": "Målbare resultater",
           "stats.s3": "transparent &amp; dokumenteret",
-          "approach.h2": "Ingen nye investeringer. Ingen forstyrrelser. <span class=\"hl\">Bare lavere energiomkostninger.</span>",
-          "approach.p": "Vi arbejder med det, I allerede har. Vi kobler os på jeres eksisterende systemer og udstyr, optimerer timing, belastning og fleksibilitet – og gør energi til en konkurrencefordel.",
-          "approach.r1h": "Vi arbejder med det, I har",
-          "approach.r1p": "Vi kobler os på jeres eksisterende systemer og udstyr. Intet nyt hardware nødvendigt.",
+          "approach.h2": "Én smart enhed. Ingen forstyrrelser. <span class=\"hl\">Bare lavere energiomkostninger.</span>",
+          "approach.p": "I beholder det udstyr, I allerede har. Vi kobler os på jeres eksisterende systemer og udstyr, optimerer timing, belastning og fleksibilitet – og gør energi til en konkurrencefordel.",
+          "approach.r1h": "I får et løbende overblik over jeres samlede forretning",
+          "approach.r1p": "Vi kobler os på jeres eksisterende systemer og udstyr via én smart enhed. Ingen ny hardwarepark, intet stort installationsprojekt.",
           "approach.r2h": "Mere effektiv brug af jeres drift",
           "approach.r2p": "Vi optimerer timing, belastning og fleksibilitet, så jeres systemer arbejder smartere – ikke hårdere.",
           "approach.r3h": "Lavere energiomkostning styrker jeres forretning",
           "approach.r3p": "I får mere ud af jeres drift – og lavere omkostninger – hvilket forbedrer indtjeningen.",
-          "approach.r4h": "Bedre for jeres forretning. Bedre for planeten.",
+          "approach.r4h": "Bedre for jeres forretning. Bedre for miljøet.",
           "approach.r4p": "Lavere energiomkostning reducerer CO₂-udledning og styrker jeres bæredygtighedsprofil.",
           "contact.h2": "Klar til at gøre energi til en <span class=\"hl\">fordel?</span>",
-          "contact.p": "Lad os tale om, hvordan Coreon kan sænke jeres energiomkostninger – uden nye investeringer.",
+          "contact.p": "Nysgerrig på hvad det betyder for jeres anlæg? Ét 15-minutters opkald viser det.",
           "contact.address": "Coreon ApS, Nørrebrogade 47, 2, 2200 København, Danmark",
           "contact.formHead": "Skriv til os",
           "contact.name": "Dit navn",
@@ -354,7 +649,16 @@
           "contact.message": "Din besked",
           "contact.send": "Send besked",
           "contact.formNote": "Åbner din e-mail-klient med beskeden udfyldt.",
-          "footer.line": "© 2026 Coreon ApS. Alle rettigheder forbeholdes."
+          "footer.line": "© 2026 Coreon ApS. Alle rettigheder forbeholdes.",
+          "footer.cookies": "Cookie- og privatlivspolitik",
+          "cookie.text": "Vi bruger kun essentiel lokal lagring – til at huske jeres sprogvalg og dette valg. Vi sætter ingen tracking- eller analysecookies. <a href=\"../cookie-policy.html\">Læs cookiepolitikken</a>.",
+          "cookie.decline": "Afvis",
+          "cookie.accept": "Accepter",
+          "a11y.skip": "Spring til indhold",
+          "a11y.backToTop": "Til toppen",
+          "a11y.copyEmail": "Kopiér e-mailadresse",
+          "a11y.copyPhone": "Kopiér telefonnummer",
+          "a11y.copied": "Kopieret!"
         }
       };
 
@@ -367,6 +671,10 @@
           var value = dict[lang] && dict[lang][el.getAttribute("data-i18n-placeholder")];
           if (value != null) el.setAttribute("placeholder", value);
         });
+        document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+          var value = dict[lang] && dict[lang][el.getAttribute("data-i18n-aria")];
+          if (value != null) el.setAttribute("aria-label", value);
+        });
         document.documentElement.lang = lang;
         document.querySelectorAll(".lang-btn").forEach(function (btn) {
           btn.classList.toggle("is-active", btn.dataset.lang === lang);
@@ -374,8 +682,15 @@
         try { localStorage.setItem("coreon-lang", lang); } catch (e) {}
       }
 
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       document.querySelectorAll(".lang-btn").forEach(function (btn) {
-        btn.addEventListener("click", function () { applyLang(btn.dataset.lang); });
+        btn.addEventListener("click", function () {
+          if (!reduceMotion && document.startViewTransition) {
+            document.startViewTransition(function () { applyLang(btn.dataset.lang); });
+          } else {
+            applyLang(btn.dataset.lang);
+          }
+        });
       });
 
       var form = document.getElementById("contact-form");
@@ -392,6 +707,200 @@
       var saved = "en";
       try { saved = localStorage.getItem("coreon-lang") || "en"; } catch (e) {}
       if (dict[saved]) applyLang(saved);
+
+      // Sticky step rail: highlight the section in view, and a top scroll-progress bar.
+      var steps = Array.prototype.slice.call(document.querySelectorAll(".step-link"));
+      var sections = steps
+        .map(function (s) { return document.getElementById(s.dataset.step); })
+        .filter(Boolean);
+
+      if (sections.length && "IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            steps.forEach(function (s) {
+              s.classList.toggle("is-active", s.dataset.step === entry.target.id);
+            });
+          });
+        }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+        sections.forEach(function (s) { observer.observe(s); });
+      }
+
+      var progressBar = document.getElementById("scrollProgress");
+      function updateProgress() {
+        var doc = document.documentElement;
+        var scrollable = doc.scrollHeight - doc.clientHeight;
+        var pct = scrollable > 0 ? (doc.scrollTop / scrollable) * 100 : 0;
+        if (progressBar) progressBar.style.width = pct + "%";
+      }
+      document.addEventListener("scroll", updateProgress, { passive: true });
+      updateProgress();
+
+      // Back to top
+      var backToTop = document.getElementById("backToTop");
+      function updateBackToTop() {
+        if (backToTop) backToTop.classList.toggle("is-visible", window.scrollY > 600);
+      }
+      document.addEventListener("scroll", updateBackToTop, { passive: true });
+      updateBackToTop();
+
+      // Cookie consent banner
+      var cookieBanner = document.getElementById("cookieBanner");
+      var CONSENT_KEY = "coreon-cookie-consent";
+      function setConsent(value) {
+        try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
+        if (cookieBanner) cookieBanner.hidden = true;
+        if (backToTop) backToTop.classList.remove("banner-open");
+      }
+      var savedConsent = null;
+      try { savedConsent = localStorage.getItem(CONSENT_KEY); } catch (e) {}
+      if (!savedConsent && cookieBanner) {
+        cookieBanner.hidden = false;
+        if (backToTop) backToTop.classList.add("banner-open");
+      }
+      var acceptBtn = document.getElementById("cookieAccept");
+      var declineBtn = document.getElementById("cookieDecline");
+      if (acceptBtn) acceptBtn.addEventListener("click", function () { setConsent("accepted"); });
+      if (declineBtn) declineBtn.addEventListener("click", function () { setConsent("declined"); });
+
+      // Keyboard navigation between sections: arrows/PageUp/PageDown/Home/End move
+      // between the step-rail sections; 1-5 jump straight to a section.
+      document.addEventListener("keydown", function (e) {
+        var tag = (document.activeElement && document.activeElement.tagName) || "";
+        if (/^(INPUT|TEXTAREA|SELECT)$/.test(tag) || (document.activeElement && document.activeElement.isContentEditable)) return;
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+        if (e.key >= "1" && e.key <= String(sections.length)) {
+          var target = sections[Number(e.key) - 1];
+          if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth", block: "start" }); }
+          return;
+        }
+
+        var activeIndex = sections.findIndex(function (s) {
+          var link = steps.filter(function (st) { return st.dataset.step === s.id; })[0];
+          return link && link.classList.contains("is-active");
+        });
+        if (activeIndex === -1) activeIndex = 0;
+
+        if (e.key === "ArrowDown" || e.key === "PageDown") {
+          e.preventDefault();
+          var next = sections[Math.min(activeIndex + 1, sections.length - 1)];
+          next.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (e.key === "ArrowUp" || e.key === "PageUp") {
+          e.preventDefault();
+          var prev = sections[Math.max(activeIndex - 1, 0)];
+          prev.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          sections[0].scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (e.key === "End") {
+          e.preventDefault();
+          sections[sections.length - 1].scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+
+      // Copy email / phone to clipboard
+      document.querySelectorAll(".copy-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var value = btn.getAttribute("data-copy");
+          if (!value || !navigator.clipboard) return;
+          navigator.clipboard.writeText(value).then(function () {
+            btn.classList.add("is-copied");
+            window.clearTimeout(btn._copyTimer);
+            btn._copyTimer = window.setTimeout(function () {
+              btn.classList.remove("is-copied");
+            }, 1600);
+          }).catch(function () {});
+        });
+      });
+
+      // Animated count-up on the results numbers, once, when scrolled into view.
+      if (!reduceMotion && "IntersectionObserver" in window) {
+        var countObserver = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            animateStatValue(entry.target);
+            obs.unobserve(entry.target);
+          });
+        }, { threshold: 0.6 });
+        document.querySelectorAll(".stat-value").forEach(function (el) { countObserver.observe(el); });
+      }
+
+      // Chart draw-in: add .in-view once the chart card is meaningfully on screen.
+      var chartCard = document.querySelector(".chart-card");
+      if (chartCard && "IntersectionObserver" in window) {
+        var chartObserver = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            chartCard.classList.add("in-view");
+            obs.unobserve(entry.target);
+          });
+        }, { threshold: 0.3 });
+        chartObserver.observe(chartCard);
+      } else if (chartCard) {
+        chartCard.classList.add("in-view");
+      }
+
+      // Chart: rotate through 3 "with Coreon" scenarios, one per loop. Each is a real
+      // simulation, not a hand-drawn curve: a fixed fictional 24h day-ahead price
+      // curve x a fixed fictional demand profile gives the "before" baseline; each
+      // scenario shifts a different amount of flexible load from the priciest hours
+      // to the cheapest ones (same total energy, per Coreon's actual approach), and
+      // the accumulated curve + percentage are both derived from that same shift —
+      // a bigger shift makes a visibly bigger, not just relabelled, curve.
+      var chartVariants = [
+        {
+          acc: "40.0,92.0 55.0,91.2 70.0,90.4 85.0,89.7 100.0,88.7 115.0,87.8 130.0,86.9 145.0,86.0 160.0,85.1 175.0,84.3 190.0,83.4 205.0,82.3 220.0,81.1 235.0,79.6 250.0,77.5 265.0,75.1 280.0,72.9 295.0,70.6 310.0,68.1 325.0,65.7 340.0,63.6 355.0,61.6 370.0,59.8 385.0,58.1 400.0,56.4 415.0,54.8 430.0,53.3 445.0,51.7 460.0,50.2 475.0,48.5 490.0,46.7 505.0,44.7 520.0,42.4 535.0,40.0 550.0,37.8 565.0,35.6 580.0,33.4 595.0,31.3 610.0,29.6 625.0,28.0 640.0,26.4 655.0,24.9 670.0,23.6 685.0,22.4 700.0,21.3 715.0,20.3 730.0,19.4 745.0,18.5 760.0,17.7",
+          pct: 7
+        },
+        {
+          acc: "40.0,92.0 55.0,91.0 70.0,89.8 85.0,88.5 100.0,87.3 115.0,86.1 130.0,85.0 145.0,83.9 160.0,82.9 175.0,81.9 190.0,80.8 205.0,79.6 220.0,78.4 235.0,77.1 250.0,75.9 265.0,74.7 280.0,73.4 295.0,71.6 310.0,69.3 325.0,66.8 340.0,64.7 355.0,62.8 370.0,60.9 385.0,59.2 400.0,57.5 415.0,55.9 430.0,54.4 445.0,52.8 460.0,51.3 475.0,49.6 490.0,47.8 505.0,45.8 520.0,43.5 535.0,41.3 550.0,39.5 565.0,38.0 580.0,36.5 595.0,35.0 610.0,33.9 625.0,32.6 640.0,31.1 655.0,29.6 670.0,28.3 685.0,27.1 700.0,26.0 715.0,25.0 730.0,24.1 745.0,23.2 760.0,22.4",
+          pct: 13
+        },
+        {
+          acc: "40.0,92.0 55.0,90.2 70.0,88.6 85.0,87.1 100.0,85.6 115.0,84.2 130.0,82.9 145.0,81.6 160.0,80.4 175.0,79.2 190.0,77.9 205.0,76.6 220.0,75.3 235.0,74.2 250.0,73.3 265.0,72.7 280.0,71.9 295.0,71.1 310.0,70.5 325.0,69.4 340.0,67.7 355.0,65.8 370.0,63.9 385.0,62.2 400.0,60.5 415.0,58.9 430.0,57.4 445.0,55.8 460.0,54.3 475.0,52.6 490.0,50.8 505.0,48.8 520.0,46.5 535.0,44.4 550.0,43.1 565.0,42.3 580.0,41.4 595.0,40.6 610.0,40.0 625.0,39.1 640.0,37.7 655.0,36.2 670.0,34.9 685.0,33.7 700.0,32.6 715.0,31.6 730.0,30.7 745.0,29.5 760.0,27.8",
+          pct: 20
+        }
+      ];
+      var chartAccAfter = document.getElementById("chartAccAfter");
+      var chartSavingsValue = document.getElementById("chartSavingsValue");
+      if (chartAccAfter && !reduceMotion) {
+        var chartVariantIndex = 0;
+        chartAccAfter.addEventListener("animationiteration", function () {
+          chartVariantIndex = (chartVariantIndex + 1) % chartVariants.length;
+          var v = chartVariants[chartVariantIndex];
+          chartAccAfter.setAttribute("points", v.acc);
+          if (chartSavingsValue) chartSavingsValue.textContent = "+" + v.pct + "%";
+        });
+      }
+
+      function animateStatValue(el) {
+        var finalText = el.textContent;
+        var matches = finalText.match(/\d+(\.\d+)?/g);
+        if (!matches) return;
+        var targets = matches.map(Number);
+        var duration = 1100;
+        var t0 = null;
+
+        function frame(ts) {
+          if (t0 === null) t0 = ts;
+          var progress = Math.min(1, (ts - t0) / duration);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var i = 0;
+          el.textContent = finalText.replace(/\d+(\.\d+)?/g, function (match) {
+            var isDecimal = match.indexOf(".") !== -1;
+            var current = targets[i] * eased;
+            i++;
+            return isDecimal ? current.toFixed(1) : String(Math.round(current));
+          });
+          if (progress < 1) {
+            window.requestAnimationFrame(frame);
+          } else {
+            el.textContent = finalText;
+          }
+        }
+        window.requestAnimationFrame(frame);
+      }
     })();
   </script>
 
